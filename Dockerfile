@@ -9,13 +9,14 @@ COPY gummi-cache/Cargo.toml gummi-cache/
 COPY gummi-metrics/Cargo.toml gummi-metrics/
 COPY gummi-commands/Cargo.toml gummi-commands/
 
-RUN mkdir -p gummi-bot/src gummi-db/src gummi-cache/src && \
-    echo 'fn main() {}' > gummi-bot/src/main.rs && \
-    echo '' > gummi-db/src/lib.rs && \
-    echo '' > gummi-cache/src/lib.rs && \
-    echo '' > gummi-metrics/src/lib.rs && \
-    echo '' > gummi-commands/src/lib.rs
-
+RUN for crate in gummi-bot gummi-db gummi-cache gummi-metrics gummi-commands; do \
+    mkdir -p $crate/src; \
+    if [ "$crate" = "gummi-bot" ]; then \
+    echo 'fn main() {}' > $crate/src/main.rs; \
+    else \
+    echo '' > $crate/src/lib.rs; \
+    fi \
+    done
 
 RUN cargo fetch
 
