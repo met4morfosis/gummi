@@ -1,0 +1,7 @@
+[package]
+name = "gummi-bot"
+version.workspace = true
+edition.workspace = true
+repository.workspace = true
+
+[dependencies]

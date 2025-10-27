@@ -1,0 +1,5 @@
+- [`gummi-bot`](https://github.com/met4morfosis/gummi/gummi-bot) — The core bot
+- [`gummi-cache`](https://github.com/met4morfosis/gummi/gummi-cache) — The cache bot
+- [`gummi-commands`](https://github.com/met4morfosis/gummi/gummi-commands) — The commands bot
+- [`gummi-db`](https://github.com/met4morfosis/gummi/gummi-db) — The database bot
+- [`gummi-metrics`](https://github.com/met4morfosis/gummi/gummi-metrics) — The metrics bot

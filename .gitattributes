@@ -1,0 +1,10 @@
+# Cargo & Rust
+*.rs text eol=lf
+*.toml text eol=lf
+
+# Docker & YAML
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Markdown / text
+*.md text eol=lf
